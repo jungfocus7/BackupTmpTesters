@@ -1,6 +1,3 @@
-//!! 배열 인덱스 forloop를 등분해서 돌리는 예제
-//  나중에 공식이 쓸만할지는 모르겠다 백업용
-
 const fn_gllr = function(l, j, i) {
     if (typeof l !== 'number') return i;
     if (typeof j !== 'number') return i;
@@ -19,17 +16,18 @@ const fn_gllr = function(l, j, i) {
 
 
 
-let arr = new Array(30000);
+let arr = new Array(300);
 arr.fill('박종명');
-arr[145] = '정희범';
+arr[149] = '정희범';
 
 let l = arr.length;
-let j = 30000 / 145;
+let j = 2;
 for (let i = 0; i < l; ++i) {
     let k = fn_gllr(l, j, i);
     let v = arr[k];
     if (v === '정희범') {
-        console.log(`찾았음: ${k}, ${i}`);
+        // console.log(`찾았음: ${k}, ${i}`);
+        console.log(`찾았음: ${i}`);
         break;
     }
 }
